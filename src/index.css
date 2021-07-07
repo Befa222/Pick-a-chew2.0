@@ -1,1 +1,19 @@
-
+*, *::after, *::before{
+  box-sizing: border-box;
+}
+body{
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+h1,h2,h3,a{
+  margin:0;
+}
+@font-face {
+  font-family: Pokemon;
+  src: url('./fonts/Pokemon\ Solid.ttf');
+}
+@font-face {
+  font-family: PressStart;
+  src: url('./fonts/PressStart2P-Regular.ttf');
+}
