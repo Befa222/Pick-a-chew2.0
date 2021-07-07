@@ -1,0 +1,74 @@
+.ingredients-page{
+    width:100vw;
+    height:100vh;
+    background-image: url('../images/kitchenCrop.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.ingredients-help-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top:2vh;
+    left: 2.5%;
+    width:95vw;
+    height: 20vh;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+.pikachu-help{
+    width: 30vw;
+    height: 90%;
+    background-image: url('../images/pikachu-help.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.typewriter-help{
+    width:60vw;
+    height:90%;
+    font-family: PressStart;
+    font-size: 4vw;
+    line-height: 1.2
+}
+.ingredients-search{
+    position: absolute;
+    top:40vh;
+    left: 5%;
+    width: 90%;
+    outline: none;
+}
+#search-bar{
+    border-bottom: 2px solid black;
+}
+.searchWrapper{
+    border: none !important;
+}
+.optionListContainer{
+    background: aliceblue !important;
+}
+.chip{
+    background: rgb(109, 233, 255) !important;
+    color: black !important;
+}
+.multiSelectContainer li:hover{
+    background: rgb(109, 233, 255) !important;
+}
+
+.next-button{
+    font-family: PressStart;
+    font-size: 6vw;
+    position: absolute;
+    top: 90vh;
+    left: 10%;
+    width: 80%;
+    border: none;
+    background-color: aliceblue;
+    border: 2px solid black;
+    border-radius: 50px;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+}

@@ -2,8 +2,13 @@ import React from 'react';
 import '../styles/home.css';
 import { Link } from 'react-router-dom';
 import TypeWriter from 'typewriter-effect';
+import useSound from 'use-sound'
+import Pika from '../audio/pika.mp3'
 
 export default function Home() {
+
+    const [play] = useSound(Pika)
+
     return (
         <div className='home-page'>
             <h1 className='home-title'>Pick a Chew</h1>
@@ -32,7 +37,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <Link to='/Ingredients'><button className='home-button'>START</button></Link>
+            <Link to='/Ingredients'><button onClick={play} className='home-button'>START</button></Link>
         </div>
     )
 }

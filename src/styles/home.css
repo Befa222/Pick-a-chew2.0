@@ -28,14 +28,13 @@
 
 .home-pokeBubble {
     position: absolute;
-    top: 65vh;
+    top: 63vh;
     left: 2.5%;
     width: 95vw;
     height: 15vh;
     background-image: url('../images/pokebubbleDesktop.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    filter: hue-rotate(280deg)
 
 }
 
@@ -45,8 +44,7 @@
     left: 6.1%;
     height: 13vh;
     width: 83.2vw;
-    background-color: rgb(255, 174, 208);
-    filter: hue-rotate(-280deg);
+    background-color: rgb(255, 203, 225);
     border-radius: 5px;
 }
 
@@ -64,7 +62,7 @@
     top: 90vh;
     left: 10%;
     width: 80%;
-    border: none;
+    border: 2px solid black;
     background-color: rgb(109, 233, 255);
     border-radius: 50px;
     padding-top: 3vw;
