@@ -1,3 +1,5 @@
+export let testI =['Beef', 'cod', 'turquey' ]
+
 export let ingredientsList = {
     list: 
          [

@@ -1,11 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/ingredients.css';
 import TypeWriter from 'typewriter-effect';
 import { Link } from 'react-router-dom';
 import Multiselect from 'multiselect-react-dropdown';
 import { ingredientsList } from '../components/ingredientsList'
+import { stock } from '../components/stock'
+
+
+
 
 export default function Ingredients() {
+
+    const [getIngredients, setGetIngredients] = useState()
+
+    function addIngredients(selectedList, selectedItem) {
+
+        setGetIngredients(stock.push(selectedItem.value))
+
+    }
+
     return (
         <div className='ingredients-page'>
             <div className='ingredients-help-container'>
@@ -29,17 +42,19 @@ export default function Ingredients() {
             </div>
             <div className='ingredients-search'>
                 <Multiselect
-                avoidHighlightFirstOption
+                    avoidHighlightFirstOption
                     displayValue='value'
                     placeholder='SELECT INGREDIENTS'
                     id="search-bar"
                     onRemove={function noRefCheck() { }}
-                    onSelect={function noRefCheck() { }}
+                    onSelect={addIngredients}
                     options={ingredientsList.list}
                     showArrow
                 />
+
             </div>
             <Link to='/Receipes'><button className='next-button'>NEXT</button></Link>
         </div>
+
     )
-}
+} console.log(stock)
