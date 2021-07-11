@@ -2,4 +2,107 @@
     width:100vw;
     height: 100vh;
     background-color: black;
+    color: white;
+    font-family: PressStart;
+   
 }
+.loading-image{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    height: auto;
+
+}
+.loading-typewriter{
+    position: absolute;
+    top: 15vh;
+    left: 5vw;
+}
+.receipe-page{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../images/receipesBG.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.receipe-container{
+    position: relative;
+    width: 100vw;
+    height: 60vh;
+}
+.receipe-name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none !important;
+    font-size: 6vw;
+    text-align: center;
+    background-color: aliceblue;
+    width: 80%;
+    height: 8vh;
+    margin-left: 10%;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.image-carousel{
+    position: relative;
+    top: 2vh;
+    left: 2.5%;
+    width: 95%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+.carousel-root{
+    position: relative;
+    top: 25vh;
+}
+.carousel .slider-wrapper.axis-horizontal .slider{
+    padding: 0 !important;
+    margin-top: 0 !important;
+    display: flex !important;
+    list-style: none !important;
+}
+.control-arrow{
+    display: none !important;
+}
+.carousel-status{
+    position: relative;
+    top: -10vh;
+    text-align: center;
+    background-color: aliceblue;
+    width: 30%;
+    margin-left: 35%;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.receipe-details{
+    position: absolute;
+    width: 95%;
+    height: 98%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: aliceblue;
+    z-index: 1;
+}
+.back-button{
+    font-family: PressStart;
+    font-size: 6vw;
+    position: absolute;
+    top: 90vh;
+    left: 10%;
+    width: 80%;
+    border: none;
+    background-color: rgb(200, 248, 247);
+    border: 2px solid black;
+    border-radius: 50px;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+}
+

@@ -5,7 +5,7 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
-.ingredients-help-container{
+.help-container{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -51,11 +51,11 @@
     background: aliceblue !important;
 }
 .chip{
-    background: rgb(109, 233, 255) !important;
+    background: pink !important;
     color: black !important;
 }
 .multiSelectContainer li:hover{
-    background: rgb(109, 233, 255) !important;
+    background: pink !important;
 }
 
 .next-button{
@@ -66,7 +66,7 @@
     left: 10%;
     width: 80%;
     border: none;
-    background-color: aliceblue;
+    background-color: rgb(200, 248, 247);
     border: 2px solid black;
     border-radius: 50px;
     padding-top: 3vw;

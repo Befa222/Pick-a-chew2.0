@@ -15,13 +15,13 @@ export default function Ingredients() {
 
     function addIngredients(selectedList, selectedItem) {
 
-        setGetIngredients(stock.push(selectedItem.value))
+    setGetIngredients(stock.push(selectedItem.value))
 
     }
 
     return (
         <div className='ingredients-page'>
-            <div className='ingredients-help-container'>
+            <div className='help-container'>
                 <div className='pikachu-help'></div>
                 <div className='typewriter-help'>
                     <TypeWriter

@@ -7,7 +7,7 @@ body{
   margin: 0;
   overflow: hidden;
 }
-h1,h2,h3,a{
+h1,h2,h3,a,p{
   margin:0;
 }
 @font-face {
