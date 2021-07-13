@@ -11,16 +11,23 @@ import { stock } from '../components/stock'
 
 export default function Ingredients() {
 
-    const [getIngredients, setGetIngredients] = useState()
+    const [getIngredients, setGetIngredients] = useState(true)
 
     function addIngredients(selectedList, selectedItem) {
+        setGetIngredients(stock.push(selectedItem.value))
+    }
 
-    setGetIngredients(stock.push(selectedItem.value))
-
+    function removeIngredients(selectedList, selectedItem) {
+        for (let i = 0; i < stock.length; i++) {
+            if (stock[i] === selectedItem.value) {
+                stock.splice(i, 1)
+            }
+        }
     }
 
     return (
         <div className='ingredients-page'>
+            <h1 className='mobile-landscape'>Please rotate your device</h1>
             <div className='help-container'>
                 <div className='pikachu-help'></div>
                 <div className='typewriter-help'>
@@ -40,21 +47,24 @@ export default function Ingredients() {
                     />
                 </div>
             </div>
+            
             <div className='ingredients-search'>
+            {getIngredients &&
                 <Multiselect
                     avoidHighlightFirstOption
                     displayValue='value'
                     placeholder='SELECT INGREDIENTS'
                     id="search-bar"
-                    onRemove={function noRefCheck() { }}
+                    onRemove={removeIngredients}
                     onSelect={addIngredients}
                     options={ingredientsList.list}
                     showArrow
+                    
                 />
-
+                }
             </div>
             <Link to='/Receipes'><button className='next-button'>NEXT</button></Link>
         </div>
 
     )
-} console.log(stock)
+}console.log(stock)

@@ -25,6 +25,7 @@ export default function Receipes() {
 
 
   const getReceipe = () => {
+    console.log(stock)
     Axios.get(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${api.oldKey}&ingredients=${stock}&number=1`)
       .then((response) => {
         setReceipe(response.data);
@@ -82,6 +83,7 @@ export default function Receipes() {
         </div>
         :
         <div className='receipe-page'>
+          <h1 className='mobile-landscape'>Please rotate your device</h1>
           <div className='help-container'>
             <div className='pikachu-help'></div>
             <div className='typewriter-help'>
@@ -95,7 +97,7 @@ export default function Receipes() {
                     .typeString('Swipe the pictures to browse, and click on them to see the details!')
                     .pauseFor(1000)
                     .deleteAll(1)
-                    .typeString('If you want to add ingredients just click the BACK button! Bon appetit!!')
+                    .typeString('If you want to add some ingredients just click the BACK button! Bon appetit!!')
                     .start()
                 }}
               />

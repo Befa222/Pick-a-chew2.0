@@ -11,6 +11,7 @@ export default function Home() {
 
     return (
         <div className='home-page'>
+            <h1 className='mobile-landscape'>Please rotate your device</h1>
             <h1 className='home-title'>Pick a Chew</h1>
             <div className='home-pikachu'></div>
             <div className='home-pokeBubble'>
