@@ -36,6 +36,7 @@
 }
 
 .receipe-page {
+    overflow: hidden;
     width: 100vw;
     height: 100vh;
     background-image: url('../images/receipesBG.jpg');
@@ -78,6 +79,7 @@
 .carousel-root {
     position: relative;
     top: 25vh;
+    font-family: PassionOne;
 }
 
 .carousel .slider-wrapper.axis-horizontal .slider {
@@ -103,7 +105,7 @@
 }
 
 .receipe-details {
-    position: absolute;
+    position: fixed;
     overflow-y: auto;
     padding-left: 3vw;
     padding-right: 3vw;
@@ -117,6 +119,7 @@
     border-radius: 10px;
     background-color: rgb(252, 234, 74);
     background-image: url('../images/detailsBG.jpg');
+    background-attachment: scroll;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -129,13 +132,12 @@
     padding: 0;
     font-size: 6vw;
     z-index: 2;
-    color: rgb(100, 40, 0);
-    text-shadow: 0px 0px 2px yellow;
+    -webkit-text-stroke: 0.2px aliceblue;
 }
 
 .details-title {
     font-family: PressStart;
-    font-size: 5vw;
+    font-size: 5.5vw;
     padding-top: 2vh;
     z-index: 2;
 }

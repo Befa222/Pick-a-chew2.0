@@ -5,11 +5,15 @@ import { Link } from 'react-router-dom';
 import Multiselect from 'multiselect-react-dropdown';
 import { ingredientsList } from '../components/ingredientsList'
 import { stock } from '../components/stock'
+import useSound from 'use-sound'
+import Loading from '../audio/healingCut.mp3'
 
 
 
 
 export default function Ingredients() {
+
+    const [play] = useSound(Loading, {volume:0.2})
 
     const [getIngredients, setGetIngredients] = useState(true)
 
@@ -63,8 +67,8 @@ export default function Ingredients() {
                 />
                 }
             </div>
-            <Link to='/Receipes'><button className='next-button'>NEXT</button></Link>
+            <Link to='/Receipes'><button onClick={play} className='next-button'>NEXT</button></Link>
         </div>
 
     )
-}console.log(stock)
+}
