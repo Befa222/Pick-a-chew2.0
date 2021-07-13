@@ -5,11 +5,8 @@ import TypeWriter from 'typewriter-effect';
 import runningPika from '../images/runningPika.gif'
 import '../styles/receipes.css'
 import { Carousel } from 'react-responsive-carousel';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
-
-
-// REACT_APP_API_SPOONACULAR_KEY = 71b0a410e528408b9c88a08d281b4d6f JL
 
 const api = {
   oldKey: "71b0a410e528408b9c88a08d281b4d6f",
@@ -18,38 +15,38 @@ const api = {
 }
 
 
-
-
 export default function Receipes() {
 
-
-
   const [receipe, setReceipe] = useState();
-  const [receipeDetails, setReceipeDetails] = useState()
+  const [receipeSteps, setReceipeSteps] = useState();
+  const [ingredientsDetails, setIngredientsDetails] = useState()
   const [loadingScreen, setLoadingScreen] = useState(true);
   const [showDetails, setShowDetails] = useState(false);
 
 
   const getReceipe = () => {
-    Axios.get(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${api.oldKey}&ingredients=${stock}&number=2`)
+    Axios.get(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${api.oldKey}&ingredients=${stock}&number=1`)
       .then((response) => {
-        console.log(response);
         setReceipe(response.data);
-
       })
-
   }
-  
-  const getDetails = (id) =>{
-    console.log(id)
+
+  const getInstructions = (id) => {
     Axios.get(`https://api.spoonacular.com/recipes/${id}/analyzedInstructions?apiKey=${api.oldKey}`)
-    .then((response2)=>{
-      console.log(response2);
-      setReceipeDetails(response2.data.id)
-
-    })
+      .then((response2) => {
+        let getSteps = response2.data.flatMap(item => item.steps)
+        setReceipeSteps(getSteps)
+      })
   }
 
+  const getDetails = (id) => {
+
+    Axios.get(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${api.oldKey}`)
+      .then((response3) => {
+        let ingredientsList = response3.data.extendedIngredients
+        setIngredientsDetails(ingredientsList)
+      })
+  }
 
   useEffect(() => {
     const timer2 = setTimeout(() => {
@@ -66,7 +63,6 @@ export default function Receipes() {
     return () => clearTimeout(timer)
   }, []);
 
-  console.log(receipe)
 
   return (
     <>
@@ -96,7 +92,7 @@ export default function Receipes() {
                     .typeString("Piiikaaa! These are the receipes you can cook!")
                     .pauseFor(1000)
                     .deleteAll(1)
-                    .typeString('Swipe the pictures to browse, and click on it to see the details!')
+                    .typeString('Swipe the pictures to browse, and click on them to see the details!')
                     .pauseFor(1000)
                     .deleteAll(1)
                     .typeString('If you want to add ingredients just click the BACK button! Bon appetit!!')
@@ -105,34 +101,58 @@ export default function Receipes() {
               />
             </div>
           </div>
-          <Carousel
-            autoPlay={false}
-            showThumbs={false}
-            showStatus={true}
-            showIndicators={false}
-            showArrows={true}
-            axis={'horizontal'}
-            selectedItem={0}
-          >
-            {receipe.map(item => (
-              <div className='receipe-container' key={item.id}>
-                <p className='receipe-name'>{item.title}</p>
-                <img onClick={getDetails(item.id)} className='image-carousel' src={item.image} alt='receipe'/>
-              </div>
-            ))}
-          </Carousel>
-          {showDetails && 
-          <div className='receipe-details'>
-              <button onClick={()=> setShowDetails(!showDetails)}>close</button>
-          </div>
+          {receipe ?
+
+            <Carousel
+              autoPlay={false}
+              showThumbs={false}
+              showStatus={true}
+              showIndicators={false}
+              showArrows={true}
+              axis={'horizontal'}
+              selectedItem={0}
+            >
+              {receipe.map(item => (
+                <div className='receipe-container' key={item.id}>
+                  <p className='receipe-name'>{item.title}</p>
+                  <img onClick={() => { getInstructions(item.id); setShowDetails(!showDetails); getDetails(item.id) }} className='image-carousel' src={item.image} alt='receipe' />
+                </div>
+              ))}
+
+            </Carousel>
+            :
+            <p className='error-message'>Oh no, all the daily points have been used! Please try again tomorrow!</p>
+          }
+          {showDetails &&
+            <div className='receipe-details'>
+              <h1 className='details-title'>Ingredients</h1>
+              {ingredientsDetails &&
+                ingredientsDetails.length ?
+                ingredientsDetails.map(item =>
+                  <ul className='details-list' key={item.id}>
+                    <li >{item.original}</li>
+                  </ul>
+                ) :
+
+                <p>Sorry there is no ingredients</p>
+              }
+              <h1 className='details-title'>Step by step</h1>
+              {receipeSteps &&
+                receipeSteps.length ?
+                receipeSteps.map(item =>
+                  <ul className='details-list' key={item.number}>
+                    <li>{item.step}</li>
+                  </ul>
+                )
+                :
+                <p>Sorry there is no details</p>
+              }
+              <button className='details-button' onClick={() => setShowDetails(!showDetails)}>CLOSE</button>
+            </div>
 
           }
           <Link to='/Ingredients'><button className='back-button'>BACK</button></Link>
         </div>
-
-
-
-
 
       }
     </>

@@ -18,3 +18,7 @@ h1,h2,h3,a,p{
   font-family: PressStart;
   src: url('./fonts/PressStart2P-Regular.ttf');
 }
+@font-face {
+  font-family: PassionOne;
+  src: url('./fonts/PassionOne-Regular.ttf')
+}

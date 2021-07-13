@@ -36,13 +36,16 @@
 }
 .ingredients-search{
     position: absolute;
-    top:40vh;
+    top:50vh;
     left: 5%;
     width: 90%;
     outline: none;
 }
 #search-bar{
-    border-bottom: 2px solid black;
+    border: 2px solid black;
+    border-radius: 10px;
+    background: aliceblue;
+    font-family: PassionOne;
 }
 .searchWrapper{
     border: none !important;
