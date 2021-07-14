@@ -13,12 +13,14 @@
     .home-title {
         position: absolute;
         top: 3vh;
+        width: 100%;
+        text-align: center;
         font-family: Pokemon;
         font-size: 15vw;
         color: rgb(255, 174, 208);
         text-shadow: 10px 5px 15px rgb(75, 75, 75);
         -webkit-text-stroke: 1.5px rgb(109, 233, 255);
-        text-align: center;
+        
     }
     .home-pikachu {
         position: absolute;
