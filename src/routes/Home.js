@@ -18,7 +18,7 @@ export default function Home() {
             <div className='home-page'>
 
                 <h1 className='home-title'>Pick a Chew</h1>
-                <img src={PikaHome} className='home-pikachu' alt='pikachu'/>
+                <img src={PikaHome} className='home-pikachu' alt='pikachu' />
                 <div className='home-pokeBubble'>
                     <div className='typewriter-container'>
                         <div className='typewriter'>

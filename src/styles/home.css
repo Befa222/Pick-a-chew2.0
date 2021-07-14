@@ -24,7 +24,6 @@
         left: 27.5%;
         width: 55vw;
         height: auto;
-        
     }
     .home-pokeBubble {
         position: absolute;
@@ -73,6 +72,9 @@
     .home-title {
         display: none;
     }
+    .home-pikachu {
+        display: none;
+    }
     .mobile-landscape {
         position: absolute;
         top: 35vh;
@@ -96,7 +98,6 @@
     .home-button {
         display: none;
     }
-    
 }
 
 @media all and (orientation: landscape) and (min-width: 1100px) and (min-height: 500px) {
@@ -111,7 +112,6 @@
     }
     .mobile-landscape {
         display: none;
-        
     }
     .home-page {
         display: none

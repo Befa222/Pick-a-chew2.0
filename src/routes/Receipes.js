@@ -27,7 +27,7 @@ export default function Receipes() {
 
 
   const getReceipe = () => {
-    Axios.get(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${api.key}&ingredients=${stock}&number=2`)
+    Axios.get(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${api.key}&ingredients=${stock}&number=5`)
       .then((response) => {
         setReceipe(response.data);
       })
@@ -70,7 +70,7 @@ export default function Receipes() {
       {loadingScreen ?
         <div className='loading-screen'>
           <img className='loading-image' src={runningPika} alt='running-pikachu' />
-          <img className='desktop-loading-image' src={spinningChar} alt='spinning-charmander'/>
+          <img className='desktop-loading-image' src={spinningChar} alt='spinning-charmander' />
           <div className='loading-typewriter'>
             <TypeWriter
               onInit={(typewriter) => {
@@ -115,7 +115,7 @@ export default function Receipes() {
               axis={'horizontal'}
               selectedItem={0}
               interval={20000}
-              
+
             >
               {receipe.map(item => (
                 <div className='receipe-container' key={item.id}>
@@ -125,7 +125,7 @@ export default function Receipes() {
               ))}
 
             </Carousel>
-            
+
             :
             <p className='error-message'>Oh no, all the daily points have been used! Please try again tomorrow!</p>
           }
@@ -158,32 +158,32 @@ export default function Receipes() {
 
           }
           <Link to='/Ingredients'><button className='back-button'>BACK</button></Link>
-        
-                  
-      
-      <div className='desktop-help-container'>
-                  <div className='charmander-help'></div>
-                  <div className='desktop-typewriter-help'>
-                      <TypeWriter
-                          onInit={(typewriter) => {
-                              typewriter
-                              .changeDelay(80)
-                              .typeString("Charmander! These are the receipes you can cook!")
-                              .pauseFor(1000)
-                              .deleteAll(1)
-                              .typeString('Click on the arrows to browse, and click a picture to see the details!')
-                              .pauseFor(1000)
-                              .deleteAll(1)
-                              .typeString('If you want to add some ingredients just click the BACK button! Bon appetit!!')
-                              .start()
-                          }}
-                      />
-                  </div>
-              </div>
-              <Link to='/Ingredients'><button className='desktop-back-button'>BACK</button></Link>
-              </div>
-              
-}
+
+
+
+          <div className='desktop-help-container'>
+            <div className='charmander-help'></div>
+            <div className='desktop-typewriter-help'>
+              <TypeWriter
+                onInit={(typewriter) => {
+                  typewriter
+                    .changeDelay(80)
+                    .typeString("Charmander! These are the receipes you can cook!")
+                    .pauseFor(1000)
+                    .deleteAll(1)
+                    .typeString('Click on the arrows to browse, and click a picture to see the details!')
+                    .pauseFor(1000)
+                    .deleteAll(1)
+                    .typeString('If you want to add some ingredients just click the BACK button! Bon appetit!!')
+                    .start()
+                }}
+              />
+            </div>
+          </div>
+          <Link to='/Ingredients'><button className='desktop-back-button'>BACK</button></Link>
+        </div>
+
+      }
     </>
 
   )

@@ -77,7 +77,7 @@
     }
 }
 
-@media all and (orientation: landscape) and (min-width:0px) and (min-height:0px){
+@media all and (orientation: landscape) and (min-width:0px) and (min-height:0px) {
     .typewriter-help {
         display: none;
     }
@@ -96,14 +96,15 @@
         background-size: contain;
     }
 }
+
 @media all and (orientation: landscape) and (min-width: 1100px) and (min-height: 500px) {
-    .ingredients-page{
+    .ingredients-page {
         background-image: url('../images/char2.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
     }
-    .desktop-help-container{
+    .desktop-help-container {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -125,7 +126,7 @@
         background-size: contain;
         background-position: center;
     }
-    .desktop-typewriter-help{
+    .desktop-typewriter-help {
         width: 65%;
         height: 90%;
         font-family: PressStart;
@@ -161,7 +162,7 @@
     .multiSelectContainer li:hover {
         background: rgb(255, 158, 47) !important;
     }
-    .desktop-next-button{
+    .desktop-next-button {
         font-family: PressStart;
         font-size: 2vw;
         position: absolute;
