@@ -27,7 +27,7 @@ export default function Receipes() {
 
 
   const getReceipe = () => {
-    Axios.get(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${api.key}&ingredients=${stock}&number=5`)
+    Axios.get(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${api.key}&ingredients=${stock}&number=2`)
       .then((response) => {
         setReceipe(response.data);
       })
@@ -115,6 +115,7 @@ export default function Receipes() {
               axis={'horizontal'}
               selectedItem={0}
               interval={20000}
+              
             >
               {receipe.map(item => (
                 <div className='receipe-container' key={item.id}>
@@ -124,6 +125,7 @@ export default function Receipes() {
               ))}
 
             </Carousel>
+            
             :
             <p className='error-message'>Oh no, all the daily points have been used! Please try again tomorrow!</p>
           }
@@ -169,7 +171,7 @@ export default function Receipes() {
                               .typeString("Charmander! These are the receipes you can cook!")
                               .pauseFor(1000)
                               .deleteAll(1)
-                              .typeString('Swipe the pictures to browse, and click on them to see the details!')
+                              .typeString('Click on the arrows to browse, and click a picture to see the details!')
                               .pauseFor(1000)
                               .deleteAll(1)
                               .typeString('If you want to add some ingredients just click the BACK button! Bon appetit!!')
