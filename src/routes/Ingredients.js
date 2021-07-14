@@ -64,7 +64,7 @@ export default function Ingredients() {
                             onSelect={addIngredients}
                             options={ingredientsList.list}
                             showArrow
-                            closeOnSelect={false}
+                            closeOnSelect={true}
 
                         />
                     }
