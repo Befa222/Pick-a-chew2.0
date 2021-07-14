@@ -2,7 +2,7 @@
     .ingredients-page {
         width: 100vw;
         min-height: 100vh;
-        overflow-y: auto;
+        overflow-y: scroll;
         background-image: url('../images/kitchenCrop.jpg');
         background-size: cover;
         background-repeat: no-repeat;
