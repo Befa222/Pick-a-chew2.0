@@ -11,6 +11,8 @@
         background-position: center;
     }
     .home-title {
+        position: absolute;
+        top: 3vh;
         font-family: Pokemon;
         font-size: 15vw;
         color: rgb(255, 174, 208);
