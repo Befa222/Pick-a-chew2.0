@@ -142,9 +142,9 @@
         font-family: PressStart;
         font-size: 2vw;
         position: absolute;
-        top: 80vh;
-        left: 30%;
-        width: 40%;
+        top: 85vh;
+        left: 35%;
+        width: 30%;
         border: 5px solid black;
         background-image: url('../images/fire.gif');
         background-repeat: no-repeat;
