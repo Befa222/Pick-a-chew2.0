@@ -27,7 +27,7 @@ export default function Receipes() {
 
 
   const getReceipe = () => {
-    Axios.get(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${api.key}&ingredients=${stock}&number=1`)
+    Axios.get(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${api.key}&ingredients=${stock}&number=5`)
       .then((response) => {
         setReceipe(response.data);
       })
