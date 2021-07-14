@@ -13,7 +13,7 @@ import Loading from '../audio/healingCut.mp3'
 
 export default function Ingredients() {
 
-    const [play] = useSound(Loading, {volume:0.2})
+    const [play] = useSound(Loading, {autoplay: false, volume:0.2})
 
     const [getIngredients, setGetIngredients] = useState(true)
 
@@ -30,6 +30,7 @@ export default function Ingredients() {
     }
 
     return (
+        <>
         <div className='ingredients-page'>
             <h1 className='mobile-landscape'>Please rotate your device</h1>
             <div className='help-container'>
@@ -70,5 +71,44 @@ export default function Ingredients() {
             <Link to='/Receipes'><button onClick={play} className='next-button'>NEXT</button></Link>
         </div>
 
+         {/* ////////////////// DESKTOP VERSION STARTS BELOW //////////////////  */}
+
+
+         <div className='desktop-help-container'>
+                <div className='charmander-help'></div>
+                <div className='desktop-typewriter-help'>
+                    <TypeWriter
+                        onInit={(typewriter) => {
+                            typewriter
+                                .changeDelay(80)
+                                .typeString("Chaaaar! Here you are able to add ingredients for your meal!")
+                                .pauseFor(1000)
+                                .deleteAll(1)
+                                .typeString('Click on the search bar to select ingredients or you can start typing too!')
+                                .pauseFor(1000)
+                                .deleteAll(1)
+                                .typeString('When you are done, click on the NEXT button!')
+                                .start()
+                        }}
+                    />
+                </div>
+            </div>
+            <div className='desktop-ingredients-search'>
+            {getIngredients &&
+                <Multiselect
+                    avoidHighlightFirstOption
+                    displayValue='value'
+                    placeholder='SELECT INGREDIENTS'
+                    id="desktop-search-bar"
+                    onRemove={removeIngredients}
+                    onSelect={addIngredients}
+                    options={ingredientsList.list}
+                    showArrow
+                    
+                />
+                }
+            </div>
+            <Link to='/Receipes'><button onClick={play} className='desktop-next-button'>NEXT</button></Link>
+     </>
     )
 }

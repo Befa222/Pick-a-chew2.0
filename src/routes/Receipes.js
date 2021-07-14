@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
 import { stock } from '../components/stock';
-import TypeWriter from 'typewriter-effect';
-import runningPika from '../images/runningPika.gif'
-import '../styles/receipes.css'
 import { Carousel } from 'react-responsive-carousel';
 import { Link } from 'react-router-dom'
+import TypeWriter from 'typewriter-effect';
+import runningPika from '../images/runningPika.gif'
+import spinningChar from '../images/spinningChar.gif'
+import '../styles/receipes.css'
+
 
 
 const api = {
@@ -25,7 +27,7 @@ export default function Receipes() {
 
 
   const getReceipe = () => {
-    Axios.get(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${api.key}&ingredients=${stock}&number=2`)
+    Axios.get(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${api.key}&ingredients=${stock}&number=1`)
       .then((response) => {
         setReceipe(response.data);
       })
@@ -68,6 +70,7 @@ export default function Receipes() {
       {loadingScreen ?
         <div className='loading-screen'>
           <img className='loading-image' src={runningPika} alt='running-pikachu' />
+          <img className='desktop-loading-image' src={spinningChar} alt='spinning-charmander'/>
           <div className='loading-typewriter'>
             <TypeWriter
               onInit={(typewriter) => {
@@ -135,7 +138,7 @@ export default function Receipes() {
                   </ul>
                 ) :
 
-                <p>Sorry there is no ingredients</p>
+                <p className='api-error'>Sorry there is no ingredients!</p>
               }
               <h1 className='details-title'>Step by step</h1>
               {receipeSteps &&
@@ -146,16 +149,39 @@ export default function Receipes() {
                   </ul>
                 )
                 :
-                <p>Sorry there is no details</p>
+                <p className='api-error'>Sorry there is no details!</p>
               }
               <button className='details-button' onClick={() => setShowDetails(!showDetails)}>CLOSE</button>
             </div>
 
           }
           <Link to='/Ingredients'><button className='back-button'>BACK</button></Link>
-        </div>
-
-      }
+        
+                  
+      
+      <div className='desktop-help-container'>
+                  <div className='charmander-help'></div>
+                  <div className='desktop-typewriter-help'>
+                      <TypeWriter
+                          onInit={(typewriter) => {
+                              typewriter
+                              .changeDelay(80)
+                              .typeString("Charmander! These are the receipes you can cook!")
+                              .pauseFor(1000)
+                              .deleteAll(1)
+                              .typeString('Swipe the pictures to browse, and click on them to see the details!')
+                              .pauseFor(1000)
+                              .deleteAll(1)
+                              .typeString('If you want to add some ingredients just click the BACK button! Bon appetit!!')
+                              .start()
+                          }}
+                      />
+                  </div>
+              </div>
+              <Link to='/Ingredients'><button className='desktop-back-button'>BACK</button></Link>
+              </div>
+              
+}
     </>
 
   )

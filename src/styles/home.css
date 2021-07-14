@@ -6,7 +6,9 @@
         width: 100vw;
         height: 100vh;
         background-image: url('../images/homeBackgroumd.gif');
-        background-size: contain;
+        background-size: 55%;
+        background-repeat: repeat;
+        background-position: center;
     }
     .home-title {
         font-family: Pokemon;
@@ -18,14 +20,11 @@
     }
     .home-pikachu {
         position: absolute;
-        top: 13vh;
-        left: 20%;
-        width: 60%;
-        height: 50vh;
-        background-image: url('../images/pikachu-home.gif');
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
+        top: 20vh;
+        left: 27.5%;
+        width: 55vw;
+        height: auto;
+        
     }
     .home-pokeBubble {
         position: absolute;
@@ -146,12 +145,13 @@
         top: 80vh;
         left: 30%;
         width: 40%;
-        border: 2px solid black;
+        border: 5px solid black;
         background-image: url('../images/fire.gif');
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 50px;
-        padding-top: 1.1vw;
-        padding-bottom: 1.1vw;
+        padding-top: 1vw;
+        padding-bottom: 1vw;
+        cursor: pointer;
     }
 }
