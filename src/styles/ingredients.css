@@ -50,9 +50,14 @@
     }
     .searchWrapper {
         border: none !important;
+        
+    }
+    .optionContainer{
+        height: 20vh;
     }
     .optionListContainer {
         background: aliceblue !important;
+        height: 20vh;
     }
     .chip {
         background: pink !important;
