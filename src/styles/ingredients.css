@@ -94,7 +94,7 @@
     }
 }
 
-@media all and (orientation: landscape) and (min-width:0px) and (min-height:0px) {
+@media all and (orientation: landscape) and (min-width: 200px) and (min-height:100px) {
     .typewriter-help {
         display: none;
     }
