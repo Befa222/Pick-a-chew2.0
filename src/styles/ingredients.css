@@ -1,4 +1,4 @@
-@media all and (orientation: portrait) {
+@media all and (orientation: portrait) and (min-width:0px) and (min-width:0px) {
     .ingredients-page {
         width: 100vw;
         min-height: 100vh;
@@ -6,6 +6,7 @@
         background-image: url('../images/kitchenCrop.jpg');
         background-size: cover;
         background-repeat: no-repeat;
+        z-index: -1;
     }
     .help-container {
         display: flex;
@@ -37,13 +38,14 @@
         line-height: 1.2;
     }
     .ingredients-search {
-        position: fixed;
+        position: relative;
         top: 40vh;
         left: 5%;
         width: 90%;
         outline: none;
     }
     #search-bar {
+        position: relative;
         border: 2px solid black;
         border-radius: 10px;
         background: aliceblue;
