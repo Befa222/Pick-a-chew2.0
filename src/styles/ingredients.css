@@ -75,8 +75,8 @@
     .next-button {
         font-family: PressStart;
         font-size: 6vw;
-        position: relative;
-        top: 85vh;
+        position: fixed;
+        top: 90vh;
         left: 10%;
         width: 80%;
         border: none;
