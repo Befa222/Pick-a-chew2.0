@@ -1,6 +1,5 @@
 @media all and (orientation: portrait) {
     .ingredients-page {
-        display: flex;
         width: 100vw;
         min-height: 100vh;
         overflow-y: auto;
