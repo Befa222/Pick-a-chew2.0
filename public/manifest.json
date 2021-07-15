@@ -19,7 +19,7 @@
     }
   ],
   "start_url": "https://pick-a-chew.netlify.app/",
-  "display": "",
+  "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
 }

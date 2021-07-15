@@ -95,7 +95,7 @@
     }
 }
 
-@media all and (orientation: landscape) {
+/* @media all and (orientation: landscape) {
     .typewriter-help {
         display: none;
     }
@@ -116,7 +116,7 @@
     }
     
     
-}
+} */
 
 @media all and (orientation: landscape) and (min-width: 1100px) and (min-height: 500px) {
     .ingredients-page {
