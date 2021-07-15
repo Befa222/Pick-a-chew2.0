@@ -159,7 +159,7 @@ export default function Receipes() {
           }
           <Link to='/Ingredients'><button className='back-button'>BACK</button></Link>
 
-
+             {/*//////////// DESKTOP VERSION STRATS BELOW ///////////////*/}
 
           <div className='desktop-help-container'>
             <div className='charmander-help'></div>
