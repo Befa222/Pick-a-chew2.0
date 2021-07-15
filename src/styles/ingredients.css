@@ -2,7 +2,7 @@
     .ingredients-page {
         width: 100vw;
         min-height: 100vh;
-        overflow-y: auto;
+        overflow: auto;
         background-image: url('../images/kitchenCrop.jpg');
         background-size: cover;
         background-repeat: no-repeat;
@@ -37,7 +37,7 @@
         line-height: 1.2;
     }
     .ingredients-search {
-        position: relative;
+        position: fixed;
         top: 40vh;
         left: 5%;
         width: 90%;
