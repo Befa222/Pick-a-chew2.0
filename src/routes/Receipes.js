@@ -27,14 +27,14 @@ export default function Receipes() {
 
 
   const getReceipe = () => {
-    Axios.get(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${api.key}&ingredients=${stock}&number=5`)
+    Axios.get(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${api.oldKey}&ingredients=${stock}&number=2`)
       .then((response) => {
         setReceipe(response.data);
       })
   }
 
   const getInstructions = (id) => {
-    Axios.get(`https://api.spoonacular.com/recipes/${id}/analyzedInstructions?apiKey=${api.key}`)
+    Axios.get(`https://api.spoonacular.com/recipes/${id}/analyzedInstructions?apiKey=${api.oldKey}`)
       .then((response2) => {
         let getSteps = response2.data.flatMap(item => item.steps)
         setReceipeSteps(getSteps)
@@ -42,7 +42,7 @@ export default function Receipes() {
   }
 
   const getDetails = (id) => {
-    Axios.get(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${api.key}`)
+    Axios.get(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${api.oldKey}`)
       .then((response3) => {
         let ingredientsList = response3.data.extendedIngredients
         setIngredientsDetails(ingredientsList)

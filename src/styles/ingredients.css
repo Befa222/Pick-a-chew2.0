@@ -37,7 +37,8 @@
         line-height: 1.2;
     }
     .ingredients-search {
-        position: absolute;
+        padding-top: 40vh;
+        margin-left: 5%;
         top: 40vh;
         left: 5%;
         width: 90%;
@@ -48,8 +49,10 @@
         border-radius: 10px;
         background: aliceblue;
         font-family: PassionOne;
+        font-size: 6vw;
     }
     .searchWrapper {
+        font-size: 4vw;
         border: none !important;
         
     }
@@ -61,6 +64,7 @@
         height: 20vh;
     }
     .chip {
+        font-size: 5vw !important;
         background: pink !important;
         color: black !important;
     }
