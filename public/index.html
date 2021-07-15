@@ -4,7 +4,14 @@
 <head>
   <meta charset="utf-8" />
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1" />
+  <script>
+    var viewport = document.querySelector("meta[name=viewport]");
+viewport.setAttribute("content", viewport.content + ", height=" + window.innerHeight)
+window.innerHeight < 300
+document.documentElement.style.setProperty('overflow', 'auto')
+viewport.setAttribute('content', 'height=' + 300 + 'px, width=device-width, initial-scale=1.0')
+  </script>
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="Web site created using create-react-app" />
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
