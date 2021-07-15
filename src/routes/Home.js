@@ -17,7 +17,7 @@ export default function Home() {
         <>
             <div className='home-page'>
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xlinkHref="http://www.w3.org/1999/xlink" width="100%" >
-                <text className='home-title' x='3%' y='50%' fill='rgb(255, 174, 208)'>Pick a Chew</text>
+                <text className='home-title' x='4%' y='50%' fill='rgb(255, 174, 208)'>Pick a Chew</text>
                 </svg>
                 <img src={PikaHome} className='home-pikachu' alt='pikachu' />
                 <div className='home-pokeBubble'>

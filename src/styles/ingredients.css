@@ -1,8 +1,9 @@
 @media all and (orientation: portrait) {
     .ingredients-page {
+        display: flex;
         width: 100vw;
         min-height: 100vh;
-        overflow-y: scroll;
+        overflow-y: auto;
         background-image: url('../images/kitchenCrop.jpg');
         background-size: cover;
         background-repeat: no-repeat;
@@ -37,8 +38,7 @@
         line-height: 1.2;
     }
     .ingredients-search {
-        padding-top: 40vh;
-        margin-left: 5%;
+        position: relative;
         top: 40vh;
         left: 5%;
         width: 90%;
