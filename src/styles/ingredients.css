@@ -1,4 +1,4 @@
-@media all and (orientation: portrait) and (max-width: 500px) and (max-height:900px) {
+@media all and (orientation: portrait) {
     .ingredients-page {
         width: 100vw;
         height: 100vh;
@@ -95,7 +95,7 @@
     }
 }
 
-@media all and (orientation: landscape) and (max-width: 1099px) and (max-height:499px) {
+@media all and (orientation: landscape) {
     .typewriter-help {
         display: none;
     }
@@ -105,25 +105,22 @@
     .next-button {
         display: none;
     }
-    .ingredients-page {
-        width: 100vw;
-        height: 100vh;
-        background: url('../images/pokemon-pikachu.jpg'), linear-gradient(rgb(255, 149, 10), rgb(255, 208, 0));
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-    }
-    
-}
-
-@media all and (orientation: landscape) and (min-width: 1100px) and (min-height: 500px) {
-    .ingredients-page {
+    .ingredients-page{
+        display: none;
         width: 100vw;
         height: 100vh;
         background-image: url('../images/char2.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+    }
+    
+    
+}
+
+@media all and (orientation: landscape) and (min-width: 1100px) and (min-height: 500px) {
+    .ingredients-page {
+        display: inherit;
     }
     .desktop-help-container {
         display: flex;

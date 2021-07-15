@@ -31,8 +31,10 @@ export default function Ingredients() {
 
     return (
         <>
+        <div className='home-mobile-landscape'>
+        <h1 className='mobile-landscape'>Please rotate your device</h1>
+        </div>
             <div className='ingredients-page'>
-                <h1 className='mobile-landscape'>Please rotate your device</h1>
                 <div className='help-container'>
                     <div className='pikachu-help'></div>
                     <div className='typewriter-help'>

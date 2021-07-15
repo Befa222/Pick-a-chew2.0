@@ -210,6 +210,28 @@
         padding-bottom: 0.5vw;
         cursor: pointer;
     }
+    .receipe-details{
+        display: none;
+        position: fixed;
+        overflow-y: auto;
+        padding-left: 1vw;
+        padding-right: 1vw;
+        width: 50%;
+        height: 98%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 5px solid black;
+        text-align: center;
+        border-radius: 10px;
+        background-color: #d0732d;
+        background-image: url('../images/detailsChar.jpg');
+        background-attachment: scroll;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        z-index: 3;
+    }
 }
 
 @media all and (orientation: landscape) and (min-width: 1100px) and (min-height: 500px) {
@@ -341,25 +363,8 @@
         
     }
     .receipe-details {
-        position: fixed;
-        overflow-y: auto;
-        padding-left: 1vw;
-        padding-right: 1vw;
-        width: 50%;
-        height: 98%;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        border: 5px solid black;
-        text-align: center;
-        border-radius: 10px;
-        background-color: #d0732d;
-        background-image: url('../images/detailsChar.jpg');
-        background-attachment: scroll;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        z-index: 3;
+        display: inherit;
+        
     }
     .details-list {
         font-family: PassionOne;
