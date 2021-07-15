@@ -55,7 +55,7 @@ export default function Ingredients() {
                     </div>
                 </div>
 
-            <div className='test'>
+           
                 <div className='ingredients-search'>
                     {getIngredients &&
                         <Multiselect
@@ -71,7 +71,7 @@ export default function Ingredients() {
 
                         />
                     }
-                </div>
+              
                 </div>
                 <Link to='/Receipes'><button onClick={play} className='next-button'>NEXT</button></Link>
             </div>
