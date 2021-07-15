@@ -94,7 +94,7 @@
     }
 }
 
-@media all and (orientation: landscape) and (min-width: 200px) and (min-height:100px) {
+@media all and (orientation: landscape) and (max-width: 1099px) and (max-height:499px) {
     .typewriter-help {
         display: none;
     }
@@ -117,6 +117,8 @@
 
 @media all and (orientation: landscape) and (min-width: 1100px) and (min-height: 500px) {
     .ingredients-page {
+        width: 100vw;
+        height: 100vh;
         background-image: url('../images/char2.jpg');
         background-repeat: no-repeat;
         background-position: center;
@@ -195,5 +197,14 @@
         padding-top: 0.7vw;
         padding-bottom: 0.7vw;
         cursor: pointer;
+    }
+    .typewriter-help{
+        display: none;
+    }
+    .ingredients-search{
+        display: none;
+    }
+    .next-button{
+        display: none;
     }
 }
