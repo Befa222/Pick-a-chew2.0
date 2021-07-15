@@ -71,9 +71,12 @@
     .desktop-home-page {
         display: none;
     }
+    .home-mobile-landscape{
+        display: none;
+    }
 }
 
-@media all and (orientation: landscape) {
+@media all and (orientation: landscape) and (min-width: 1px) and (min-height: 1px) {
     .home-title {
         display: none;
     }
@@ -89,17 +92,21 @@
         font-size: 2.5vw;
         font-family: PressStart;
     }
-    .home-page{
-    display: none;
-    }
-    
-    .home-mobile-landscape {
+    .home-mobile-landscape{
         width: 100vw;
         height: 100vh;
         background: url('../images/pokemon-pikachu.jpg'), linear-gradient(rgb(255, 149, 10), rgb(255, 208, 0));
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
+    }
+    .home-page{
+    display: none;
+    }
+    .desktop-home-page {
+        display: none;
+        width: 100vw;
+        height: 100vh;
     }
     .typewriter {
         display: none;
@@ -129,8 +136,7 @@
         display: none;
     }
     .desktop-home-page {
-        width: 100vw;
-        height: 100vh;
+        display: inherit;
     }
     .desktop-home-title {
         font-family: Pokemon;
