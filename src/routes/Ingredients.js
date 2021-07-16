@@ -13,6 +13,7 @@ import Loading from '../audio/healingCut.mp3'
 
 export default function Ingredients() {
 
+
     const [play] = useSound(Loading, { autoplay: false, volume: 0.2 })
 
     const [getIngredients, setGetIngredients] = useState(true)
