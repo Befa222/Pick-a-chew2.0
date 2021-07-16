@@ -1,7 +1,7 @@
 @media all and (orientation: portrait) {
     .ingredients-page {
         width: 100vw;
-        height: 110vh;
+        height: 100vh;
         overflow: auto;
         background-image: url('../images/kitchenCrop.jpg');
         background-size: cover;
@@ -93,6 +93,12 @@
     .desktop-next-button{
         display: none;
     }
+    .ingredients-landscape{
+        display: none;
+    }
+    .ingredients-mobile-landscape{
+        display: none;
+    }
 }
 
  @media all and (orientation: landscape) and (min-width:450px) and (min-height:300px)  {
@@ -121,6 +127,23 @@
     }
     .desktop-next-button{
         display: none;
+    }
+    .ingredients-landscape {
+        position: absolute;
+        top: 35vh;
+        left: 10%;
+        width: 80%;
+        text-align: center;
+        font-size: 2.5vw;
+        font-family: PressStart;
+    }
+    .ingredients-mobile-landscape{
+        width: 100vw;
+        height: 100vh;
+        background: url('../images/pokemon-pikachu.jpg'), linear-gradient(rgb(255, 149, 10), rgb(255, 208, 0));
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
     }
 }
 
@@ -210,6 +233,13 @@
         display: none;
     }
     .next-button{
+        display: none;
+    }
+    .ingredients-landscape{
+        display: none;
+
+    }
+    .ingredients-mobile-landscape{
         display: none;
     }
 }

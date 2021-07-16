@@ -31,8 +31,8 @@ export default function Ingredients() {
 
     return (
         <>
-        <div className='home-mobile-landscape'>
-        <h1 className='mobile-landscape'>Please rotate your device</h1>
+        <div className='ingredients-mobile-landscape'>
+        <h1 className='ingredients-landscape'>Please rotate your device</h1>
         </div>
             <div className='ingredients-page'>
                 <div className='help-container'>
