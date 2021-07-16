@@ -57,7 +57,7 @@ export default function Ingredients() {
                 </div>
 
            
-                <div className='ingredients-search'>
+                <>
                     {getIngredients &&
                         <Multiselect
                             avoidHighlightFirstOption
@@ -73,7 +73,7 @@ export default function Ingredients() {
                         />
                     }
               
-                </div>
+                </>
                 <Link to='/Receipes'><button onClick={play} className='next-button'>NEXT</button></Link>
             </div>
 

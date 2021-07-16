@@ -37,15 +37,12 @@
         font-size: 4vw;
         line-height: 1.2;
     }
-    .ingredients-search {
+    #search-bar {
         position: relative;
         top: 40vh;
         left: 5%;
         width: 90%;
         outline: none;
-    }
-    #search-bar {
-        position: relative;
         border: 2px solid black;
         border-radius: 10px;
         background: aliceblue;
@@ -101,7 +98,7 @@
     }
 }
 
- @media all and (min-width:450px) and (min-height:300px)  {
+ @media all and (orientation: landscape) and (min-width:450px) and (min-height:300px)  {
     .typewriter-help {
         display: none;
     }
