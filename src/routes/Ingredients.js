@@ -11,7 +11,13 @@ import Loading from '../audio/healingCut.mp3'
 
 
 
+
 export default function Ingredients() {
+
+     function test(){
+ let hideVirtualKeyboard = require('hide-virtual-keyboard')
+hideVirtualKeyboard(hideVirtualKeyboard)
+}
 
 
     const [play] = useSound(Loading, { autoplay: false, volume: 0.2 })
@@ -57,7 +63,7 @@ export default function Ingredients() {
                 </div>
 
            
-                <>
+                <div onFocus={test}>
                     {getIngredients &&
                         <Multiselect
                             avoidHighlightFirstOption
@@ -73,7 +79,7 @@ export default function Ingredients() {
                         />
                     }
               
-                </>
+                </div>
                 <Link to='/Receipes'><button onClick={play} className='next-button'>NEXT</button></Link>
             </div>
 
