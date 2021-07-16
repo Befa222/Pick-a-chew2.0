@@ -95,7 +95,7 @@
     }
 }
 
- @media all and (orientation: landscape) and (min-width:450px)  {
+ @media all and (orientation: landscape) and (min-width:450px) and (min-height:300px)  {
     .typewriter-help {
         display: none;
     }
@@ -115,9 +115,13 @@
         background-position: center;
         background-size: cover;
 
-
     }
-    
+    .desktop-ingredients-search{
+        display: none;
+    }
+    .desktop-next-button{
+        display: none;
+    }
 }
 
 
