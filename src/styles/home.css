@@ -12,15 +12,14 @@
     }
     .home-title {
         position: absolute;
-        top: 3vh;
+        top: 5vh;
         width: 100%;
         text-align: center;
         font-family: Pokemon;
         font-size: 15vw;
         stroke: rgb(109, 233, 255);
         stroke-width: 3px;
-        text-shadow: -3px 3px rgb(88, 88, 88) ;
-        
+        text-shadow: -3px 3px rgb(88, 88, 88);
     }
     
     .home-pikachu {
@@ -77,7 +76,7 @@
 }
 
  @media all and (orientation: landscape) and (min-width: 1px) and (min-height: 1px) {
-    .home-title {
+     .home-title {
         display: none;
     }
     .home-pikachu {
@@ -102,19 +101,94 @@
     }
     .home-page{
     display: none;
-    }
+    } 
     .desktop-home-page {
         display: none;
         width: 100vw;
         height: 100vh;
     }
-    .typewriter {
+     .typewriter {
         display: none;
     }
     .home-button {
         display: none;
     }
 }
+/* @media all and (orientation: landscape){
+    .home-title{
+        position: absolute;
+        top: 5vh;
+        width: 100%;
+        text-align: center;
+        font-family: Pokemon;
+        font-size: 15vw;
+        stroke: rgb(109, 233, 255);
+        stroke-width: 3px;
+        text-shadow: -3px 3px rgb(88, 88, 88);
+    }
+    .home-page {
+        width: 100vw;
+        height: 190vh;
+        background-image: url('../images/homeBackgroumd.gif');
+        background-size: 100%;
+        background-repeat: repeat;
+        background-position: 0% 0%;
+    }
+    .home-pikachu {
+        position: absolute;
+        top: 35vh;
+        left: 37.5%;
+        width: 35vw;
+        height: auto;
+    }
+    .home-pokeBubble {
+        position: absolute;
+        top: 120vh;
+        left: 2.5%;
+        width: 95vw;
+        height: 40vh;
+        background-image: url('../images/pokebubbleDesktop.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    .typewriter-container {
+        position: absolute;
+        top: 1vh;
+        left: 6.1%;
+        height: 38vh;
+        width: 83.2vw;
+        background-color: rgb(255, 203, 225);
+        border-radius: 5px;
+    }
+    .typewriter {
+        padding: 2vw;
+        font-family: PressStart;
+        font-size: 4vw;
+        line-height: 1.2;
+    }
+    .home-button {
+        font-family: PressStart;
+        font-size: 4vw;
+        position: absolute;
+        top: 180vh;
+        left: 25%;
+        width: 50%;
+        border: 2px solid black;
+        background-color: rgb(200, 248, 247);
+        border-radius: 50px;
+        padding-top: 2vw;
+        padding-bottom: 2vw;
+    }
+    .desktop-home-page {
+        display: none;
+    }
+    .home-mobile-landscape{
+        display: none;
+    }
+} */
+
+
+
 
 @media all and (orientation: landscape) and (min-width: 1100px) and (min-height: 500px) {
     .home-title {

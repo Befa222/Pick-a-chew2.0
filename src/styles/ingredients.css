@@ -1,7 +1,7 @@
 @media all and (orientation: portrait) {
     .ingredients-page {
         width: 100vw;
-        min-height: 100vh;
+        height: 110vh;
         overflow: auto;
         background-image: url('../images/kitchenCrop.jpg');
         background-size: cover;
@@ -109,10 +109,13 @@
         display: none;
         width: 100vw;
         height: 100vh;
+        overflow-y: auto;
         background-image: url('../images/char2.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+
+
     }
     
 }
