@@ -1,11 +1,11 @@
 @media all and (orientation: portrait) {
     .ingredients-page {
-       display: flex;
-        min-height: 100vh;
-        overflow: auto;
+        min-height: fit-content;
+        overflow-y: scroll;
         background-image: url('../images/kitchenCrop.jpg');
         background-size: cover;
         background-repeat: no-repeat;
+        background-position: center;
         
     }
     .help-container {
