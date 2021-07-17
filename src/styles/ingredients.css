@@ -54,6 +54,7 @@
     }
     .optionContainer {
         height: 20vh;
+        z-index: 1;
     }
     .optionListContainer {
         background: aliceblue !important;

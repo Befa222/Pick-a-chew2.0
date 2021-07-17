@@ -18,7 +18,7 @@ export default function Ingredients() {
 
     function virtualKeyboardFalse() {
         let viewport2 = document.querySelector("meta[name=viewport]");
-        viewport2.setAttribute('content', "width=device-width, initial-scale=1")
+        viewport2.setAttribute('content', viewport2.content + "width=device-width, initial-scale=1")
     }
 
     const [play] = useSound(Loading, { autoplay: false, volume: 0.2 })
