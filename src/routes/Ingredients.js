@@ -11,6 +11,11 @@ import Loading from '../audio/healingCut.mp3'
 
 export default function Ingredients() {
 
+    function test(){
+    var viewport = document.querySelector("meta[name=viewport]");
+viewport.setAttribute("content", viewport.content + ", height=" + window.innerHeight)}
+
+
     const [play] = useSound(Loading, { autoplay: false, volume: 0.2 })
 
     const [getIngredients, setGetIngredients] = useState(true)
@@ -55,6 +60,7 @@ export default function Ingredients() {
 
                     {getIngredients &&
                     
+                    <div onFocus={test}>
                         <Multiselect
                             avoidHighlightFirstOption
                             displayValue='value'
@@ -67,6 +73,7 @@ export default function Ingredients() {
                             closeOnSelect={true}
 
                         />
+                        </div>
                     }
             
                 <Link to='/Receipes'><button onClick={play} className='next-button'>NEXT</button></Link>
