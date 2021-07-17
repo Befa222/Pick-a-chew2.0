@@ -6,7 +6,6 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        
     }
     .help-container {
         display: flex;
@@ -52,9 +51,8 @@
     .searchWrapper {
         font-size: 4vw;
         border: none !important;
-        
     }
-    .optionContainer{
+    .optionContainer {
         height: 20vh;
     }
     .optionListContainer {
@@ -82,23 +80,22 @@
         border-radius: 50px;
         padding-top: 3vw;
         padding-bottom: 3vw;
-       
     }
-    .desktop-ingredients-search{
+    .desktop-ingredients-search {
         display: none;
     }
-    .desktop-next-button{
+    .desktop-next-button {
         display: none;
     }
-    .ingredients-landscape{
+    .ingredients-landscape {
         display: none;
     }
-    .ingredients-mobile-landscape{
+    .ingredients-mobile-landscape {
         display: none;
     }
 }
 
- @media all and (orientation: landscape) and (min-width:450px) and (min-height:300px)  {
+@media all and (orientation: landscape) and (min-width:450px) and (min-height:300px) {
     .typewriter-help {
         display: none;
     }
@@ -108,7 +105,7 @@
     .next-button {
         display: none;
     }
-    .ingredients-page{
+    .ingredients-page {
         display: none;
         width: 100vw;
         height: 100vh;
@@ -117,9 +114,8 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-
     }
-    .desktop-ingredients-search{
+    .desktop-ingredients-search {
         display: none;
         position: absolute;
         top: 50vh;
@@ -127,7 +123,7 @@
         width: 40%;
         outline: none;
     }
-    .desktop-next-button{
+    .desktop-next-button {
         display: none;
         font-family: PressStart;
         font-size: 2vw;
@@ -153,7 +149,7 @@
         font-size: 2.5vw;
         font-family: PressStart;
     }
-    .ingredients-mobile-landscape{
+    .ingredients-mobile-landscape {
         width: 100vw;
         height: 100vh;
         background: url('../images/pokemon-pikachu.jpg'), linear-gradient(rgb(255, 149, 10), rgb(255, 208, 0));
@@ -162,7 +158,6 @@
         background-size: contain;
     }
 }
-
 
 @media all and (orientation: landscape) and (min-width: 1100px) and (min-height: 500px) {
     .ingredients-page {
@@ -200,7 +195,6 @@
     }
     .desktop-ingredients-search {
         display: inherit;
-        
     }
     #desktop-search-bar {
         border-bottom: 5px solid black;
@@ -226,20 +220,19 @@
     .desktop-next-button {
         display: inherit;
     }
-    .typewriter-help{
+    .typewriter-help {
         display: none;
     }
-    .ingredients-search{
+    .ingredients-search {
         display: none;
     }
-    .next-button{
+    .next-button {
         display: none;
     }
-    .ingredients-landscape{
+    .ingredients-landscape {
         display: none;
-
     }
-    .ingredients-mobile-landscape{
+    .ingredients-mobile-landscape {
         display: none;
     }
 }

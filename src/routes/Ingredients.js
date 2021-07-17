@@ -11,14 +11,15 @@ import Loading from '../audio/healingCut.mp3'
 
 export default function Ingredients() {
 
-    function test(){
-    var viewport = document.querySelector("meta[name=viewport]");
-viewport.setAttribute("content", viewport.content + ", height=" + window.innerHeight)}
+    function virtualKeyboardTrue() {
+        let viewport = document.querySelector("meta[name=viewport]");
+        viewport.setAttribute("content", viewport.content + ", height=" + window.innerHeight)
+    }
 
-function test2(){
-    var viewport2 = document.querySelector("meta[name=viewport]");
-    viewport2.setAttribute('content',"width=device-width, initial-scale=1")
-}
+    function virtualKeyboardFalse() {
+        let viewport2 = document.querySelector("meta[name=viewport]");
+        viewport2.setAttribute('content', "width=device-width, initial-scale=1")
+    }
 
     const [play] = useSound(Loading, { autoplay: false, volume: 0.2 })
 
@@ -38,9 +39,9 @@ function test2(){
 
     return (
         <>
-        <div className='ingredients-mobile-landscape'>
-        <h1 className='ingredients-landscape'>Please rotate your device</h1>
-        </div>
+            <div className='ingredients-mobile-landscape'>
+                <h1 className='ingredients-landscape'>Please rotate your device</h1>
+            </div>
             <div className='ingredients-page'>
                 <div className='help-container'>
                     <div className='pikachu-help'></div>
@@ -62,9 +63,9 @@ function test2(){
                     </div>
                 </div>
 
-                    {getIngredients &&
-                    
-                    <div onFocus={test} onBlur={test2} >
+                {getIngredients &&
+
+                    <div onFocus={virtualKeyboardTrue} onBlur={virtualKeyboardFalse} >
                         <Multiselect
                             avoidHighlightFirstOption
                             displayValue='value'
@@ -77,9 +78,9 @@ function test2(){
                             closeOnSelect={true}
 
                         />
-                        </div>
-                    }
-            
+                    </div>
+                }
+
                 <Link to='/Receipes'><button onClick={play} className='next-button'>NEXT</button></Link>
             </div>
 
