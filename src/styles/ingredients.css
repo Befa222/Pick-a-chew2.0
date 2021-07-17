@@ -1,7 +1,7 @@
 @media all and (orientation: portrait) {
     .ingredients-page {
-        width: 100vw;
-        height: 100vh;
+       display: flex;
+        min-height: 100vh;
         overflow: auto;
         background-image: url('../images/kitchenCrop.jpg');
         background-size: cover;
@@ -38,7 +38,7 @@
         line-height: 1.2;
     }
     #search-bar {
-        position: relative;
+        position: absolute;
         top: 40vh;
         left: 5%;
         width: 90%;
@@ -72,7 +72,7 @@
     .next-button {
         font-family: PressStart;
         font-size: 6vw;
-        position: sticky;
+        position: absolute;
         top: 90vh;
         left: 10%;
         width: 80%;
