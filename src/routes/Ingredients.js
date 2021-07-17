@@ -15,6 +15,10 @@ export default function Ingredients() {
     var viewport = document.querySelector("meta[name=viewport]");
 viewport.setAttribute("content", viewport.content + ", height=" + window.innerHeight)}
 
+function test2(){
+    var viewport2 = document.querySelector("meta[name=viewport]");
+    viewport2.setAttribute('content',"width=device-width, initial-scale=1")
+}
 
     const [play] = useSound(Loading, { autoplay: false, volume: 0.2 })
 
@@ -60,7 +64,7 @@ viewport.setAttribute("content", viewport.content + ", height=" + window.innerHe
 
                     {getIngredients &&
                     
-                    <div onFocus={test}>
+                    <div onFocus={test} onBlur={test2} >
                         <Multiselect
                             avoidHighlightFirstOption
                             displayValue='value'
