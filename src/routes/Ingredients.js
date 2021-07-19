@@ -16,10 +16,10 @@ export default function Ingredients() {
         viewport.setAttribute("content", viewport.content + ", height=" + window.innerHeight)
     }
 
-    function virtualKeyboardFalse() {
-        let viewport2 = document.querySelector("meta[name=viewport]");
-        viewport2.setAttribute('content', viewport2.content + "width=device-width, initial-scale=1")
-    }
+ function virtualKeyboardFalse() {
+    let viewport = document.querySelector("meta[name=viewport]");
+       viewport.setAttribute('content', "width=device-width, initial-scale=1")
+}
 
     const [play] = useSound(Loading, { autoplay: false, volume: 0.2 })
 
