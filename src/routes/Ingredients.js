@@ -13,7 +13,7 @@ export default function Ingredients() {
 
     function virtualKeyboardTrue() {
         let viewport = document.querySelector("meta[name=viewport]");
-        viewport.setAttribute("content", viewport.content = "width=device-width, initial-scale=1, user-scalable=0, height=" + window.innerHeight)
+        viewport.setAttribute("content", viewport.content + ", height=" + window.innerHeight)
     }
 
  function virtualKeyboardFalse() {
@@ -42,7 +42,7 @@ export default function Ingredients() {
             <div className='ingredients-mobile-landscape'>
                 <h1 className='ingredients-landscape'>Please rotate your device</h1>
             </div>
-            <div className='ingredients-page' onFocus={virtualKeyboardFalse}>
+            <div className='ingredients-page'>
                 <div className='help-container'>
                     <div className='pikachu-help'></div>
                     <div className='typewriter-help'>
@@ -81,7 +81,7 @@ export default function Ingredients() {
                     </div>
                 }
 
-                <Link to='/Receipes'><button onClick={play}  className='next-button'>NEXT</button></Link>
+                <Link to='/Receipes'><button onClick={play} onFocus={virtualKeyboardFalse} className='next-button'>NEXT</button></Link>
             </div>
 
             {/* ////////////////// DESKTOP VERSION STARTS BELOW //////////////////  */}
