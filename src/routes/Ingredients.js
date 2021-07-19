@@ -13,12 +13,12 @@ export default function Ingredients() {
 
     function virtualKeyboardTrue() {
         let viewport = document.querySelector("meta[name=viewport]");
-        viewport.setAttribute("content", viewport.content = "width=device-width, initial-scale=1, user-scalable=0, height=window.innerHeight")
+        viewport.setAttribute("content", viewport.content + ", height=" + window.innerHeight)
     }
 
  function virtualKeyboardFalse() {
     let viewport = document.querySelector("meta[name=viewport]");
-       viewport.setAttribute('content', viewport.content = "width=device-width, initial-scale=1, user-scalable=0")
+       viewport.setAttribute('content', viewport.content = "width=device-width, initial-scale=1, user-scalable=0" )
 }
 
     const [play] = useSound(Loading, { autoplay: false, volume: 0.2 })
@@ -65,7 +65,7 @@ export default function Ingredients() {
 
                 {getIngredients &&
 
-                    <div onFocus={virtualKeyboardTrue} onBlur={virtualKeyboardFalse} >
+                    <div onFocus={virtualKeyboardTrue}>
                         <Multiselect
                             avoidHighlightFirstOption
                             displayValue='value'
@@ -122,7 +122,7 @@ export default function Ingredients() {
                     />
                 }
             </div>
-            <Link to='/Receipes'><button onClick={play} className='desktop-next-button'>NEXT</button></Link>
+            <Link to='/Receipes'><button onClick={()=>play, virtualKeyboardFalse()} className='desktop-next-button'>NEXT</button></Link>
         </>
     )
 }
